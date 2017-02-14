@@ -2,7 +2,7 @@
 
 ## 役割
 - 環境構築
-  - [x] VSCode (すでにmspjp.netにある)
+  - [ ] VSCode (すでにmspjp.netにある)
   - [x] Azure (すでにmspjp.netにある)
   - [x] node (コマンドいれるだけ)
   - [x] php (特になし)
