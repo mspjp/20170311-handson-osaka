@@ -13,7 +13,7 @@
   - Azure WebApps
     - [ ] インスタンス作成
     - [ ] phpでWebサイト作成
-    - [ ] gitからデプロイ(gitの使い方も解説)
+    - [ ] gitからデプロイ (gitの使い方も解説)
   - LINE bot
     - [ ] LINE botアカウントの作成
     - [ ] nodeでbot作成
