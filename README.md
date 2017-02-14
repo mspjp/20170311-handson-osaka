@@ -3,21 +3,21 @@
 ## 役割
 - 環境構築
   - [ ] VSCode (すでにmspjp.netにある)
-  - [x] Azure (すでにmspjp.netにある)
-  - [x] node (コマンドいれるだけ)
-  - [x] php (特になし)
-  - [x] git (コマンドいれるだけ)
+  - [ ] Azure (すでにmspjp.netにある)
+  - [ ] node (コマンドいれるだけ)
+  - [ ] php (特になし)
+  - [ ] git (コマンドいれるだけ)
 - 目次
   - はじめに
-    - [x] Azure等全体説明
+    - [ ] Azure等全体説明
   - Azure WebApps
-    - [x] インスタンス作成
-    - [x] phpでWebサイト作成
-    - [x] gitからデプロイ(gitの使い方も解説)
+    - [ ] インスタンス作成
+    - [ ] phpでWebサイト作成
+    - [ ] gitからデプロイ(gitの使い方も解説)
   - LINE bot
-    - [x] LINE botアカウントの作成
-    - [x] nodeでbot作成
-    - [x] gitからデプロイ
-    - [x] botと話してみる
-    - [x] node jsのデバッグ方法
-  - おわりに
+    - [ ] LINE botアカウントの作成
+    - [ ] nodeでbot作成
+    - [ ] gitからデプロイ
+    - [ ] botと話してみる
+    - [ ] node jsのデバッグ方法
+  - おわりに :+1:
