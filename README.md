@@ -15,9 +15,15 @@
     - [ ] phpでWebサイト作成
     - [ ] gitからデプロイ (gitの使い方も解説)
   - LINE bot
-    - [ ] LINE botアカウントの作成
-    - [ ] nodeでbot作成
-    - [ ] gitからデプロイ
-    - [ ] botと話してみる
+    - [x] LINE botアカウントの作成
+    - [x] nodeでbot作成
+    - [x] gitからデプロイ
+    - [x] botと話してみる
+    - [ ] botの応答を変える
+    - [ ] シミュレータの使い方
     - [ ] node jsのデバッグ方法
   - おわりに :+1:
+
+  ## ドキュメント
+
+  [LINE Botの作り方](line/doc/line.md)
