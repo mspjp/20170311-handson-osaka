@@ -11,15 +11,16 @@
   - はじめに
     - [ ] Azure等全体説明
   - Azure WebApps
-    - [ ] インスタンス作成
-    - [ ] phpでWebサイト作成
-    - [ ] gitからデプロイ (gitの使い方も解説)
+    - [ ] インスタンス作成 (笹くん)
+    - [ ] phpでWebサイト作成 (笹くん)
+    - [ ] gitからデプロイ (笹くん)
   - LINE bot
-    - [x] LINE botアカウントの作成
-    - [x] nodeでbot作成
-    - [x] gitからデプロイ
-    - [x] botと話してみる
+    - [x] LINE botアカウントの作成 (garicchi)
+    - [x] nodeでbot作成 (garicchi)
+    - [x] gitからデプロイ (garicchi)
+    - [x] botと話してみる (garicchi)
     - [ ] botの応答を変える
+    - [ ] シミュレータ作成 (yando)
     - [ ] シミュレータの使い方
     - [ ] node jsのデバッグ方法
   - おわりに :+1:
