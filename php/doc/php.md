@@ -1,5 +1,3 @@
-AzureとPHPでWebサイト作成
-
 ## 注意事項
 このハンズオンを行うには以下の環境が必要になります。
 * インターネットに接続されたコンピュータ
@@ -219,7 +217,7 @@ PaaS(Platform as a Service)とは、サービスとしてのプラットフォ�
 
 PaaSとは、本当に作りたいアプリ作成のためのプラットフォームを提供するクラウドの形なのです。
 
-[PaaS]
+![PaaS](https://i.gyazo.com/cb32755eada0deff03ca520fb13d02ba.png)
 
 ### Web Appsとは
 Web Appsとは、AzureのApp Serviceの内、Webサイトをホスティングする機能のことです。簡単に言えば、Azure版のWebサーバと言う事になりますね。
@@ -229,8 +227,6 @@ ASP.Net、PHP、Node,js、Python、Javaのサーバサイド環境を簡単に�
 URLも、デフォルトで(任意の名前).azurewebsites.netが割り当てられるので、別途ドメインを用意する必要もありません。また、必要であれば独自ドメインの割り当ても可能です。(Imagineサブスクリプションでは不可、別途サブスクリプションを用意する必要あり)
 
 デプロイ(配置)には、FTPやGitの他、OneDriveやDropboxといったクラウドストレージをサポートしています。また、Imagineサブスクリプションでは、1GBのストレージが割り当てられ、その領域を自由に使うことができます。
-
-[WebApps]
 
 ## 5.作ったWebアプリをAzureに配置してみよう
 番外で解説したように、デプロイ(配置)には複数の方法を利用することができます。FTPやVisualStudioを利用した方法、Git(GitHub,Bitbucket,独自Gitリポジトリ)を利用した方法、クラウドストレージであるOneDriveやDropboxを利用した方法です。
@@ -360,7 +356,7 @@ MySQL Workbenchを起動します。
 
 ### todo-mysql内のapi.phpに接続情報を加える
 
-### **WebAppsにデプロイする
+### WebAppsにデプロイする
 
 ### データベースにデータが入ったことを確認する
 
