@@ -1,0 +1,82 @@
+body{
+  background: #0078d7;
+  font-family: "Segoe UI Semibold","Segoe WP Semibold","Segoe UI","Segoe WP","Tahoma","Arial","sans-serif";
+}
+
+h1{
+  background: #003056;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #00bcf2;
+  border-color: #19507b;
+}
+
+#div-main{
+  width:70%;
+  box-shadow: 0 2px 2px rgba(0,0,0,.25);
+  background: #FFF;
+  margin-top: 10px;
+  padding: 14px;
+}
+#div-main:hover{
+  border: solid 4px #9cd5f4;
+  padding: 10px;
+}
+
+.div-button{
+  width:100%;
+  text-align:right; 
+}
+
+#select-tasks{
+  width:100%;
+  font-size:20px;
+}
+
+/*Bootstrap コントロール系のCSS上書き*/
+.form-control{
+  border-radius: 0px;
+  border-color: #b3b3b3;
+}
+
+.form-control:focus{
+  border-color: #00bcf2;
+  box-shadow: none;
+}
+
+/*Bootstrap ボタンのCSS上書き*/
+.btn-default {
+    background-color:#00bcf2;
+	border-color:#00bcf2;
+    border-radius: 0px;
+    background-image:none;
+    color: #FFF;
+    box-shadow: none;
+    margin: 10px 0px;
+    padding: 2px 10px;
+    text-shadow:none;
+    width:130px;
+    height:40px;
+    font-size:20px;
+}
+.btn-default:hover {
+	border-color:#ccf2fc;
+	background-color:#00bcf2;
+    color: #FFF;
+    box-shadow: none;
+}
+.btn-default:focus {
+	border-color:#00bcf2;
+	background-color:#00bcf2;
+    background-image:none;
+    color: #FFF;
+    box-shadow: none;
+}
+.btn-default:active:focus {
+	background-color:#00bcf2;
+    background-image:none;
+    color: #FFF;
+    box-shadow: none;
+}

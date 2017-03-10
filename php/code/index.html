@@ -1,0 +1,148 @@
+<!-- Todo登録、表示画面 -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHPTodoApp</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+    crossorigin="anonymous">
+    <!-- My StyleSeet -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <h1>PHPTodoアプリ</h1>
+    <div id="div-main" class="container">
+        <!-- Todoの名前と期限日 -->
+        <h3>名前</h3>
+        <input id="text-name" type="text" name="task_name" class="form-control" placeholder="task name" />
+        <h3>期限日</h3>
+        <input id="text-date" type="date" name="task_date" class="form-control" />
+        <div class="div-button">
+            <input id="button-submit" type="button" value="submit" class="btn btn-default" />
+            <input id="button-delete" type="button" value="delete" class="btn btn-default" />
+        </div>
+        <!-- Todo一覧のリスト -->
+        <select id="select-tasks" multiple class="form-control" size="10"></select>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+    <!-- ページが読み込まれた時に実行されるjavascript -->
+    <script type="text/javascript">
+        $(function(){
+            //タスク一覧をapi.phpから取得するupdate_task関数
+            var update_task = function(){
+                //リクエストデータ
+                var data = {
+                    param:{
+                        type:'sync'
+                    }  
+                };
+                //api.phpにPOSTリクエスト
+                $.ajax({
+                    type: 'POST',
+                    url: 'api.php',
+                    data: data,
+                    success: function(data){
+                        //返ってきたタスク一覧データを表示
+                        $('#select-tasks').empty();
+                        for(var i=0;i<data.length;i++){
+                            //タスクidはoptionの属性に付加
+                            $('#select-tasks').append(
+                            '<option task_id="'+data[i].task_id+'">'
+                            +' 名前: '+data[i].task_name
+                            +' 期限日: '+data[i].task_date
+                            +'</option>');
+                        }
+                    }
+                });
+                
+            }
+
+            //submitボタンがクリックされたとき
+            $('#button-submit').click(function(){
+
+                //タスクの名前と期限日を取得
+                var name = $('#text-name').val();
+                var date = $('#text-date').val();
+                var task = {
+                    task_name:name,
+                    task_date:date
+                };
+                if(name===''||date===''){
+                    //タスク名か日付が入力されていないならalert
+                    alert('タスク名か日付を入力してください');
+                }else{
+                    //リクエストデータ生成
+                    var data = {
+                        param:{
+                            type:'add',
+                            task:task
+                        }  
+                    };
+                    //api.phpにPOSTリクエスト
+                    $.ajax({
+                        type: 'POST',
+                        url: 'api.php',
+                        data: data,
+                        success: function(data){
+                            //リクエストに成功したらタスク一覧を更新
+                            update_task();
+                            $('#text-name').val('');
+                            $('#text-date').val('');
+                        }
+                    });
+                }
+            });
+            
+            //deleteボタンがクリックされたら
+            $('#button-delete').click(function(){
+                //どのタスクが選択されているかを取得
+                var select = $('#select-tasks')[0];
+                var selected = select.options[select.selectedIndex];
+                
+                if(selected === undefined){
+                    //もし何も選択されていないならalert
+                    alert('削除したいタスクを選択してください');
+                }else{
+                    //optionの属性からtaskidを取得
+                    var task_id = selected.attributes['task_id'].value;
+                
+                    //リクエストデータ生成
+                    var data = {
+                        param:{
+                            type:'remove',
+                            id:task_id
+                        }  
+                    };
+                    //POSTリクエスト生成
+                    $.ajax({
+                        type: 'POST',
+                        url: 'api.php',
+                        data: data,
+                        success: function(data){
+                            update_task();
+                        }
+                    });
+                }
+            });
+
+            //初回タスク一覧読み込み
+            update_task();
+
+        });
+    </script>
+</body>
+
+</html>
