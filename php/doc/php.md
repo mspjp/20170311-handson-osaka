@@ -303,7 +303,7 @@ Web Appと同じ要領でMySQLを作成してみましょう。
 ### 環境の準備
 Todoアプリのテンプレートを下記に用意しましたので、ダウンロードしてください。
 
-(URL)
+![mysql](https://github.com/mspjp/20160208AzureHandsonNagoya)
 
 
 ### MySQL Workbenchのインストール
