@@ -270,3 +270,8 @@ Deployment successfulと表示されればOKです。
 Botと話してみましょう。Botから応答が帰ってきたらOKです。
 
 ![44](img/44.png)
+
+## ローカルデバッグ方法
+プログラムを修正するたびにサーバーへ配置してLINEアプリで試していてはとても大変です。
+
+シミュレータは[ここ](https://github.com/garicchi/linedebugger-proto/releases/tag/1.0)からダウンロード
