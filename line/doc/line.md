@@ -90,7 +90,7 @@ lsコマンドを使うと以下のように、package.jsonとserver.jsが表示
 
 WindowsのPowerShellの人
 ```sh
-echo "node_modules/"|Out-File .gitignore -Encoding utf-8
+echo "node_modules/"|Out-File .gitignore -Encoding utf8
 ```
 Macのターミナルアプリの人
 ```sh
