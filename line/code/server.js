@@ -2,7 +2,7 @@
 const access_token = "{your Channel Access Token here}";
 //シミュレータを使ってローカルデバッグする場合、ここをtrueにする
 //LINEアプリと通信をする場合はfalseにする
-var localDebug = true;
+var localDebug = false;
 
 if (localDebug) {
   var access_server = "http://localhost";
