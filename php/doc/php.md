@@ -12,9 +12,8 @@
 準備のできていない方はお近くのスタッフに声をかけてください。
 ## ファイル構成
 ハンズオンのフォルダーには以下のものが含まれています。
-* README.md : この資料
-* basic/  :Hello PHPのサンプル。記事中で作成します。
-* todo/   :自由課題で使用するTodoアプリケーション。
+* php/doc/php.md : この資料
+* php/code/todo/   :Todoアプリケーション。
 
 # AzureのWeb Appを使ったPHPサイトの構築
 Microsoftのクラウドサービス、Microsoft AzureのWeb Appを使用して、PHPサイトを構築する手順と解説。
