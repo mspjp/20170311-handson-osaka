@@ -45,6 +45,9 @@ function add($param){
     
     //postで送られてきたタスクデータを取得
     $task = $param['task'];
+    foreach($task as $key => $value){
+        $task[$key] = htmlspecialchars($value,ENT_QUOTES);
+    }
     
     $task_array = array();
     $current_id = 1;
