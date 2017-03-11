@@ -90,7 +90,7 @@ lsコマンドを使うと以下のように、package.jsonとserver.jsが表示
 
 WindowsのPowerShellの人
 ```sh
-echo "node_modules/"|Out-File .gitignore -Encoding utf-8
+echo "node_modules/"|Out-File .gitignore -Encoding utf8
 ```
 Macのターミナルアプリの人
 ```sh
@@ -189,7 +189,7 @@ Bot設定の画面から**APIを利用する**ボタンを押します。
 
 ## BotをAzureとつなげる
 
-Botの設定からステータスの下にある**LINE Developersで設定する**を押します。
+**アカウント設定**>**Bot設定**画面で、ステータスの下にある**LINE Developersで設定する**を押します。
 
 ![15](img/15.png)
 
