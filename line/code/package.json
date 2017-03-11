@@ -14,9 +14,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mspjp/20170311-handson-osaka.git"
+    "url": "git+https://github.com/mspjp/20170311-handson-osaka.git"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "linebot sample"
 }
